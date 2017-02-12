@@ -8,8 +8,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 import org.springframework.data.redis.core.index.Indexed;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.NumberFormat;
 
 @RedisHash("employees")
 public class Employee implements Serializable {
@@ -26,12 +24,7 @@ public class Employee implements Serializable {
 	private String email;
 	private String gender;
 	private Department dept;
-
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date birthday;
-	// 数据格式必须类似于 2,333.2
-	// #是一个数字
-	@NumberFormat(pattern = "#,###.#")
 	private double salary;
 
 	public Employee() {

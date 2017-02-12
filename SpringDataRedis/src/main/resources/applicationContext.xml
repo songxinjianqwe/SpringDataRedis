@@ -50,4 +50,9 @@
 	
 	<!-- 使用注解来配置AOP -->
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<!-- 配置国际化资源文件 -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="i18n"></property>
+	</bean>
 </beans>
