@@ -68,9 +68,7 @@ public class EmployeeRestController {
 	// 更新
 	@RequestMapping(value = "/emp", method = RequestMethod.PUT)
 	public void update(@RequestBody @Valid Employee employee, BindingResult result, Locale locale) {
-		if (!validateLastName(employee.getLastName())) {
-			throw new UsernameExistedException(employee.getLastName(), locale);
-		} else if (result.hasErrors()) {
+		if (result.hasErrors()) {
 			throw new ValidationException(result.getFieldErrors());
 		}
 		System.out.println("update:" + employee);

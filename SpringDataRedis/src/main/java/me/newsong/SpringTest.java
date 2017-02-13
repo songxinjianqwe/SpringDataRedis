@@ -7,7 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.data.domain.Page;
 
 import me.newsong.domain.Department;
 import me.newsong.domain.Employee;
@@ -57,7 +56,8 @@ public class SpringTest {
 //		Employee employee = employeeService.findByID(1);
 //		System.out.println(employee);
 //		System.out.println(employeeService.isLastNameValid("A"));
-		Page<Employee> employees = employeeService.findAll(0, 5);
-		System.out.println(employees.getContent());
+//		Page<Employee> employees = employeeService.findAll(0, 5);
+//		System.out.println(employees.getContent());
+		System.out.println(System.currentTimeMillis());
 	}
 }

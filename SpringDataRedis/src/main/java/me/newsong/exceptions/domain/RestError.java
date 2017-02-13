@@ -59,7 +59,4 @@ public class RestError {
 		return "RestError [status=" + status + ", code=" + code + ", fieldErrors=" + fieldErrors + ", moreinfoURL="
 				+ moreinfoURL + "]";
 	}
-	
-	
-	
 }

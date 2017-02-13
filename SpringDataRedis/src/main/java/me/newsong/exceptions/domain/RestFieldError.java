@@ -48,6 +48,4 @@ public class RestFieldError {
 	public String toString() {
 		return "RestFieldError [field=" + field + ", rejectedValue=" + rejectedValue + ", message=" + message + "]";
 	}
-
-	
 }

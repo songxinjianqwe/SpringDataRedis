@@ -34,7 +34,7 @@
 	<bean id="jedisConnectionFactory"
 		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
 		destroy-method="destroy">
-		<property name="hostName" value="115.159.210.179" />
+		<property name="hostName" value="127.0.0.1" />
 		<property name="port" value="6379" />
 		<property name="timeout" value="15000" />
 		<property name="database" value="0" />
@@ -55,4 +55,5 @@
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basename" value="i18n"></property>
 	</bean>
+	
 </beans>
