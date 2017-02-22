@@ -23,7 +23,7 @@ public class DepartmentRestController {
 	@RequestMapping(value = "/depts", method = RequestMethod.GET)
 	public List<Department> findAllDepts(Locale locale) {
 		List<Department> depts = departmentService.findAll();
-		if (depts.size() == 4) {
+		if (depts.size() == 0) {
 			throw new DepartmentNotFoundException(locale);
 		} else {
 			return depts;
